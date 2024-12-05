@@ -1,0 +1,244 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.unactive {
+    background: white;
+}
+
+.active {
+    background: #8621f8;
+    color: rgb(0, 0, 0);
+}
+
+.keyBoard {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.keyBoard>.row1,
+.row2,
+.row3,
+.row4,
+.row5 {
+    width: 780px;
+    height: 60px;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    background: white;
+    margin-right: 125px;
+}
+
+/* Individual Keys NORDIC LAYOUT */
+#enter {
+    height: 115px;
+    margin-left: 15px;
+}
+
+#space {
+    width: 390px;
+}
+
+#capslock {
+    width: 100px;
+}
+
+#tab {
+    width: 90px;
+}
+
+#shift {
+    width: 60px;
+}
+
+#alt {
+    width: 65px;
+}
+
+#ctrl {
+    width: 65px;
+}
+
+#fn {
+    width: 65px;
+}
+
+#win {
+    width: 65px;
+}
+
+#shiftRight {
+    width: 155px;
+}
+
+.keyBoard>.row1 .row2 .row3 .row4 .row5,
+button {
+    width: 55px;
+    height: 55px;
+    margin-left: 5px;
+    background: white;
+    outline: none;
+    border-color: black;
+    border-radius: 1px;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px black;
+}
+
+.row1 .row2 .row3 .row4 .row5,
+button:hover {
+    background: #8621f8;
+    transition: 0.5s ease;
+}
+
+#backspace {
+    width: 100px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar>h1 {
+    align-self: center;
+    padding: 10px;
+}
+
+
+/* Left Sidebar */
+.sidebar>.menu>h2 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-top: -60px;
+    border-bottom: 1px solid white;
+}
+
+.sidebar {
+    background: rgba(41, 41, 41);
+    backdrop-filter: blur(15px);
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.sidebar .menu {
+    width: 100%;
+    margin-top: 80px;
+}
+
+.sidebar .menu .item {
+    position: relative;
+    cursor: pointer;
+}
+
+.sidebar .menu .item a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 60px;
+}
+
+.sidebar .menu .item a:hover {
+    background: #8621f8;
+    transition: 0.5s ease;
+}
+
+.sidebar .menu .item i {
+    margin-right: 15px;
+}
+
+.sidebar .menu .item a .dropdown {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.2s;
+}
+
+.sidebar .menu .item .submenu {
+    display: none;
+}
+
+.sidebar .menu .item .submenu a {
+    padding-left: 80px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+    margin-bottom: 200px;
+    margin-top: 25px;
+}
+
+
+/* Right Sidebar */
+.sidebarRight {
+    background: rgba(41, 41, 41);
+    backdrop-filter: blur(15px);
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow-y: auto;
+}
+
+.sidebarRight>.menu>h2 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+}
+
+/* Color Picker Styling */
+
+.sidebar .menu .item .submenucolor {
+    display: flex;
+    place-items: center;
+    padding: 10px;
+}
+
+#colorPicker {
+    margin-left: 60px;
+}
+
+.sidebar .menu .item .submenucolor button {
+    height: 32px;
+    width: 64px;
+    font-size: 12px;
+    margin-left: 30px;
+}
+
+
+
+.resetColorButton {
+    display: flex;
+}
+
+.resetColorButton button {
+    place-items: center;
+    margin-left: 400px;
+}
+
+.resetColors {
+    background: white;
+}
