@@ -4,21 +4,77 @@
     padding: 0;
 }
 
-.unactive {
-    background: white;
-}
 
 .active {
-    background: #8621f8;
+    background: #a8a8a8;
     color: rgb(0, 0, 0);
 }
 
+
+/*ISO Nordic Layout*/
 .keyBoard {
-    display: grid;
+    display: none;
     align-items: center;
     justify-content: center;
 }
 
+
+/*Ansi Layout*/
+.keyBoardAnsi {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Individual Keys NORDIC LAYOUT */
+.keyBoard #enter {
+    height: 115px;
+    margin-left: 15px;
+}
+
+.keyBoard #space {
+    width: 390px;
+}
+
+.keyBoard #capslock {
+    width: 100px;
+}
+
+.keyBoard #tab {
+    width: 90px;
+}
+
+.keyBoard #shift {
+    width: 65px;
+}
+
+.keyBoard #alt {
+    width: 65px;
+}
+
+.keyBoard #ctrl {
+    width: 65px;
+}
+
+.keyBoard #fn {
+    width: 65px;
+}
+
+.keyBoard #win {
+    width: 65px;
+}
+
+.keyBoard #shiftRight {
+    width: 150px;
+}
+
+.keyBoard #backspace {
+    width: 100px;
+}
+
+
+
+/*Nordic Layout Styling */
 .keyBoard>.row1,
 .row2,
 .row3,
@@ -29,49 +85,7 @@
     display: grid;
     grid-template-columns: repeat(15, 1fr);
     background: white;
-    margin-right: 125px;
-}
-
-/* Individual Keys NORDIC LAYOUT */
-#enter {
-    height: 115px;
-    margin-left: 15px;
-}
-
-#space {
-    width: 390px;
-}
-
-#capslock {
-    width: 100px;
-}
-
-#tab {
-    width: 90px;
-}
-
-#shift {
-    width: 60px;
-}
-
-#alt {
-    width: 65px;
-}
-
-#ctrl {
-    width: 65px;
-}
-
-#fn {
-    width: 65px;
-}
-
-#win {
-    width: 65px;
-}
-
-#shiftRight {
-    width: 155px;
+    margin-right: 110px;
 }
 
 .keyBoard>.row1 .row2 .row3 .row4 .row5,
@@ -89,28 +103,95 @@ button {
     box-shadow: 1px 1px 1px black;
 }
 
-.row1 .row2 .row3 .row4 .row5,
+.keyBoard>.row1 .row2 .row3 .row4 .row5,
 button:hover {
-    background: #8621f8;
+    background: #a8a8a8;
     transition: 0.5s ease;
 }
 
-#backspace {
+/*ANSI Layout Styling*/
+.keyBoardAnsi>.row1,
+.row2,
+.row3,
+.row4,
+.row5 {
+    width: 780px;
+    height: 60px;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    background: white;
+    margin-right: 110px;
+}
+
+.keyBoardAnsi>.row1 .row2 .row3 .row4 .row5,
+button {
+    width: 55px;
+    height: 55px;
+    margin-left: 5px;
+    background: white;
+    outline: none;
+    border-color: black;
+    border-radius: 1px;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px black;
+}
+
+.keyBoardAnsi>.row1 .row2 .row3 .row4 .row5,
+button:hover {
+    background: #a8a8a8;
+    transition: 0.5s ease;
+}
+
+/* Individual Keys ANSI LAYOUT */
+.keyBoardAnsi #enter {
+    width: 115px;
+}
+
+.keyBoardAnsi #space {
+    width: 390px;
+}
+
+.keyBoardAnsi #capslock {
     width: 100px;
 }
 
-
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.keyBoardAnsi #tab {
+    width: 90px;
 }
 
-.navbar>h1 {
-    align-self: center;
-    padding: 10px;
+.keyBoardAnsi #shift {
+    width: 125px;
 }
 
+.keyBoardAnsi #alt {
+    width: 65px;
+}
+
+.keyBoardAnsi #ctrl {
+    width: 65px;
+}
+
+.keyBoardAnsi #fn {
+    width: 65px;
+}
+
+.keyBoardAnsi #win {
+    width: 65px;
+}
+
+.keyBoardAnsi #shiftRight {
+    width: 150px;
+}
+
+.keyBoardAnsi #backspace {
+    width: 100px;
+}
+
+.keyBoardAnsi #backslash {
+    width: 65px;
+}
 
 /* Left Sidebar */
 .sidebar>.menu>h2 {
@@ -126,7 +207,7 @@ button:hover {
 .sidebar {
     background: rgba(41, 41, 41);
     backdrop-filter: blur(15px);
-    width: 300px;
+    width: 15%;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -146,7 +227,7 @@ button:hover {
 
 .sidebar .menu .item a {
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none;
     display: block;
     padding: 5px 30px;
@@ -174,7 +255,7 @@ button:hover {
 }
 
 .sidebar .menu .item .submenu a {
-    padding-left: 80px;
+    padding-left: 10%;
 }
 
 header {
@@ -184,6 +265,7 @@ header {
     font-size: 3vw;
     margin-bottom: 200px;
     margin-top: 25px;
+    margin-left: 10px;
 }
 
 
@@ -191,7 +273,7 @@ header {
 .sidebarRight {
     background: rgba(41, 41, 41);
     backdrop-filter: blur(15px);
-    width: 300px;
+    width: 15%;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -218,27 +300,50 @@ header {
 }
 
 #colorPicker {
-    margin-left: 60px;
+    margin-left: 6.5%;
 }
 
 .sidebar .menu .item .submenucolor button {
-    height: 32px;
+    height: 28px;
     width: 64px;
     font-size: 12px;
     margin-left: 30px;
 }
 
 
-
+/*Reset color button styling*/
 .resetColorButton {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    margin-top: auto;
 }
 
 .resetColorButton button {
-    place-items: center;
-    margin-left: 400px;
+    position: fixed;
+    bottom: 2%;
+    left: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 12.5%;
+    z-index: 1000;
 }
 
 .resetColors {
     background: white;
+}
+
+/*Price*/
+
+#cartContainer {
+    line-height: 60px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
 }

@@ -12,14 +12,12 @@
 </head>
 
 <body>
-  <header>CustomKeyboards</header>
-  <div class="resetColorButton">
-    <button id="resetColors">Reset Colors</button>
-  </div>
+  <header>Custom Keyboards</header>
+
 
   <div class="keyBoard">
     <div class="row1">
-      <button id="a">§</button>
+      <button>Esc</button>
       <button>1</button>
       <button>2</button>
       <button>3</button>
@@ -92,15 +90,90 @@
     </div>
   </div>
 
+  <div class="keyBoardAnsi">
+    <div class="row1">
+      <button>Esc</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button>0</button>
+      <button>-</button>
+      <button>=</button>
+
+      <button id="backspace">Backspace</button>
+    </div>
+    <div class="row2">
+      <button id="tab">Tab</button>
+      <button>Q</button>
+      <button>W</button>
+      <button>E</button>
+      <button>R</button>
+      <button>T</button>
+      <button>Y</button>
+      <button>U</button>
+      <button>I</button>
+      <button>O</button>
+      <button>P</button>
+      <button>[</button>
+      <button>]</button>
+      <button id="backslash">\</button>
+    </div>
+    <div id="enterRow" class="row3">
+      <button id="capslock">Caps Lock</button>
+      <button>A</button>
+      <button>S</button>
+      <button>D</button>
+      <button>F</button>
+      <button>G</button>
+      <button>H</button>
+      <button>J</button>
+      <button>K</button>
+      <button>L</button>
+      <button>;</button>
+      <button>'</button>
+      <button id="enter">Enter</button>
+    </div>
+    <div class="row4">
+      <button id="shift">Shift</button>
+      <button>Z</button>
+      <button>X</button>
+      <button>C</button>
+      <button>V</button>
+      <button>B</button>
+      <button>N</button>
+      <button>M</button>
+      <button>,</button>
+      <button>.</button>
+      <button>/</button>
+      <button id="shiftRight">Shift</button>
+    </div>
+    <div class="row5">
+      <button id="ctrl">Ctrl</button>
+      <button id="win">Win</button>
+      <button id="alt">Alt</button>
+      <button id="space">Space</button>
+      <button id="alt">Alt</button>
+      <button id="fn">Fn</button>
+      <button id="win">Win</button>
+      <button id="ctrl">Ctrl</button>
+    </div>
+  </div>
+
   <div class="sidebar">
     <div class="menu">
       <h2>Configuration Menu</h2>
+
       <div class="item">
         <a class="subbtn"><i class="fas fa-keyboard"></i>Layout<i class="fas fa-angle-right dropdown"></i></a>
         <div class="submenu">
-          <a href="#" class="sub-item">ANSI</a>
-          <a href="#" class="sub-item">ISO</a>
-          <a href="#" class="sub-item">NORDIC</a>
+          <a href="#" id="toggleAnsi" class="sub-item">ANSI ($149.00)</a>
+          <a href="#" id="toggleIso" class="sub-item">ISO Nordic ($149.00)</a>
         </div>
       </div>
       <div class="item">
@@ -113,20 +186,34 @@
       <div class="item">
         <a class="subbtn"><i class="fas fa-microchip"></i>Switches<i class="fas fa-angle-right dropdown"></i></a>
         <div class="submenu">
-          <a href="#" class="sub-item">SWITCH 1</a>
-          <a href="#" class="sub-item">SWITCH 2</a>
-          <a href="#" class="sub-item">SWITCH 3</a>
+          <a href="#" id="switch1" class="sub-item">Cherry MX Blue ($39.99)</a>
+          <a href="#" id="switch2" class="sub-item">Cherry MX Red ($39.99)</a>
+          <a href="#" id="switch3" class="sub-item">Cherry MX Brown ($39.99)</a>
+          <a href="#" id="switch4" class="sub-item">Akko V3 Pro Cream Blue ($44.99)</a>
         </div>
       </div>
+
     </div>
+  </div>
+
+  <div class="resetColorButton">
+    <button id="resetColors">Reset Colors</button>
   </div>
 
 
   <div class="sidebarRight">
     <div class="menu">
       <h2>Cart</h2>
-      <div class="item">
-      </div>
+      <section id="cartContainer">
+        <div id="price">
+          Total Price: $<span id="totalPrice">0</span>
+        </div>
+        <div id="coloredKeys">
+          Keys Colored: <span id="keyCount">0</span>
+        </div>
+        <div id="chosenSwitchDiv">Chosen Switch: <span id="chosenSwitch"></span>
+        </div>
+      </section>
     </div>
   </div>
 </body>
