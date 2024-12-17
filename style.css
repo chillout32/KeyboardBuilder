@@ -293,9 +293,10 @@ header {
 
 /* Color Picker Styling */
 
-.sidebar .menu .item .submenucolor {
+#submenucolor {
     display: flex;
-    place-items: center;
+    justify-items: center;
+    align-items: center;
     padding: 10px;
 }
 
@@ -303,7 +304,7 @@ header {
     margin-left: 6.5%;
 }
 
-.sidebar .menu .item .submenucolor button {
+#applyColor {
     height: 28px;
     width: 64px;
     font-size: 12px;
